@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.13)
+project(server C)
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_BUILD_TYPE Debug)
+add_executable(server main.c exit.c connection.c path.c)
+target_link_libraries(server ssl crypto)
